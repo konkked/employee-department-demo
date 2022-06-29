@@ -11,4 +11,19 @@ import java.util.List;
 public class Salary {
 	private double baseSalary;
 	private List<SalaryComponent> salaryComonents;
+	
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+	public List<SalaryComponent> getSalaryComonents() {
+		return salaryComonents;
+	}
+	public void setSalaryComonents(List<SalaryComponent> salaryComonents) {
+		this.salaryComonents = salaryComonents;
+	}
+	
+	
 }

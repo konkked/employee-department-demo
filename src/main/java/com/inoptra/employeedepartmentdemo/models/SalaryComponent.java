@@ -9,6 +9,22 @@ package com.inoptra.employeedepartmentdemo.models;
 public class SalaryComponent {
 	private String name;
 	
-	private double amount;
+	private double factor;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getFactor() {
+		return factor;
+	}
+
+	public void setFactor(double factor) {
+		this.factor = factor;
+	}
 	
 }

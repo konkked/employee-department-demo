@@ -5,5 +5,5 @@ package com.inoptra.employeedepartmentdemo.services;
  * @Description:
  * Service layer contract which supports operations on Department object
  **/
-public interface DepartmentService {
+public class DepartmentService {
 }
