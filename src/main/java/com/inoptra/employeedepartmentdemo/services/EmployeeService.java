@@ -16,6 +16,11 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
+	/**
+	 * Compute and return salary for given employee
+	 * @return Calculate salary of employee and return the same if employee with given @param empId exists
+	 * @return 0.0, otherwise.
+	 */
 	public double getSalary(long empId) {
 		
 		Optional<Employee> optEmployee = employeeRepository.findById(empId);
@@ -24,13 +29,14 @@ public class EmployeeService {
 		
 		Employee emp = optEmployee.get();
 		
-		return emp.getSalary()
-							.getSalaryComonents()
-							.parallelStream()
-							.reduce(
-									Double.valueOf(0.0), 
-									(total, sc) -> total + (sc.getFactor() *  emp.getSalary().getBaseSalary()),
-									(c1, c2) -> c1 + c2
-							);
+		return emp
+				.getSalary()
+				.getSalaryComonents()
+				.parallelStream()
+				.reduce(
+					Double.valueOf(0.0), 
+					(total, sc) -> total + (sc.getFactor() *  emp.getSalary().getBaseSalary()),
+					(c1, c2) -> c1 + c2
+				);
 	}
 }
