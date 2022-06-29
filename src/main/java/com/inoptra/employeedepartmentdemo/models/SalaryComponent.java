@@ -8,7 +8,7 @@ package com.inoptra.employeedepartmentdemo.models;
  * */
 public class SalaryComponent {
 	private String name;
-	
+
 	private double factor;
 
 	public String getName() {
@@ -26,5 +26,4 @@ public class SalaryComponent {
 	public void setFactor(double factor) {
 		this.factor = factor;
 	}
-	
 }

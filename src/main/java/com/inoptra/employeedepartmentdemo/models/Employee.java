@@ -7,13 +7,13 @@ package com.inoptra.employeedepartmentdemo.models;
  **/
 public class Employee {
 
-    private Long id;
+	private Long id;
 
-    private String name;
+	private String name;
 
-    private Salary salary;
+	private Salary salary;
 
-    private Department department;
+	private Department department;
 
 	public Long getId() {
 		return id;
@@ -46,6 +46,5 @@ public class Employee {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-    
     
 }

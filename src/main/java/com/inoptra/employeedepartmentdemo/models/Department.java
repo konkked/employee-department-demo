@@ -9,11 +9,11 @@ import java.util.List;
  **/
 public class Department {
 
-    private Long id;
+	private Long id;
 
-    private String name;
+	private String name;
 
-    private List<Employee> employees;
+	private List<Employee> employees;
 
 	public Long getId() {
 		return id;
@@ -38,6 +38,5 @@ public class Department {
 	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
 	}
-    
     
 }
