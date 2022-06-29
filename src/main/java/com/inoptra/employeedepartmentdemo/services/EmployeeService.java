@@ -20,7 +20,7 @@ public class EmployeeService {
 		
 		Optional<Employee> optEmployee = employeeRepository.findById(empId);
 		
-		if(optEmployee.isEmpty()) return 0.0;
+		if(!optEmployee.isPresent()) return 0.0;
 		
 		Employee emp = optEmployee.get();
 		
