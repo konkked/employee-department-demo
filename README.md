@@ -59,31 +59,6 @@ All required dependencies (ex. spring boot, data jpa, h2, etc) are already added
 
 	6. Open h2 console and login to the same (basic h2 properties have been set in the application)
 
-
-
-<h4>Assignment / TODOs:</h4>
-
-As part of backend team, you need to write REST APIs to
-
-    - Get average salary to be paid to given department
-    
-    - Compare two salaries component-wise
-    
-    - Update base salary
-
-
-You will need to do below tasks:
-
-	1. Apply required annotations / add required methods to all repositories
-	
-	2. Apply required annotations / add required methods to all services
-	
-	3. Update / re-factor Controller layer 
-	
-	4. Write basic unit tests to test implemented functionalities
-
-Feel free to re-factor the existing code in case required.
-
 <br/>
 
 Build: 
