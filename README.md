@@ -47,15 +47,15 @@ All required dependencies (ex. spring boot, data jpa, h2, etc) are already added
 
 <h4>Steps:</h4>
 
-	1. Clone from git@github.com:svpmirashi/employee-department-demo.git
+	1. Clone from git@github.com:inoptradigital/employee-department-demo.git
 	
-	2. Import the project to your IDE and build it
+	2. Use your favorite text editor or IDE and make sure you’re familiar with it
 	
-	3. Work on tasks mentioned Assignments / ToDos section
+	3. Import the project to your IDE and build it
 	
-	4. Run the spring boot application - you may see exceptions - fix them
+	4. Run the spring boot application - you may see exceptions - fix them - Get yourself familiarize with the codebase
 	
-	5. The spring boot application is in running state without any exceptions
+	5. At this point, the spring boot application is in running state without any exceptions
 
 	6. Open h2 console and login to the same (basic h2 properties have been set in the application)
 
