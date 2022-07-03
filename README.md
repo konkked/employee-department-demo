@@ -51,9 +51,12 @@ All required dependencies (ex. spring boot, data jpa, h2, etc) are already added
 
 ---
 **Build**
+
 _mvn clean install_
+
 ---
 **Test**
+
 _mvn clean test_
 
 ----
