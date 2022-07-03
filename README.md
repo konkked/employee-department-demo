@@ -1,68 +1,59 @@
-<h1>employee-department-demo</h1>
+## employee-department-demo
 
-<p>
-This is an application representing relationships between models - provides some statistics on department-wise employee data  like expenses per department, average salary per department, employees count per department, etc.	
+This app represents relationships between models - it provides statistics on departmental  employee data: Expenses/department; Average salary/department; Employee count/department, etc.
 
-There are two teams working on employee-department-demo application. The backend team is responsible for maintaining microservices backend and frontend team is responsible for developing different UIs required. 
-	
-The application aims to able to provide support for 
+Two teams work are on the app:&nbsp; The backend team is responsible for maintaining microservices; &nbsp; The frontend team develops UIs.
 
-		- Add / Update / Delete Departments 
-		
-		- Add / Update / Delete Employees 
-		
-		- Employee salary management
-		
-		- Graphical representation of department-wise dashboards like expenses per department, average salary per department, employees count per department, etc.
-		
-<h4>Salary Calculation Logic:</h4>
+The application aims to able to provide support for
 
-SalaryComponent is dependent upon base salary and can be calculated as baseSalary multiplied by respective factor. i.e. 
- 		
-<code> SalaryComponent_amount = baseSalary * factor; </code>
-	 	
+	 - Add / Update / Delete Departments
+
+	 - Add / Update / Delete Employees
+
+	 - Employee salary management
+
+	 - Graphical representation of departmental dashboards:
+	 Expenses/department; Average salary/department; Employee count/department, etc.
+
+#### Salary Calculation Logic
+
+SalaryComponent is dependent upon base salary and can be calculated as baseSalary multiplied by respective factor. i.e.
+
+       SalaryComponent_amount = baseSalary * factor;
+
 Actual salary can be calculated as sum of all SalaryComponent amounts.
 
-<code> Salary_amount = Sum of all SalaryComponent_amounts; </code>
+       Salary_amount = Sum of all SalaryComponent_amounts;
 
-</p>
 
-<br/>
-
-<h3>PRE-REQUISITES:</h3>
-
-Setup you local environment to work on the codebase:
+### PRE-REQUISITES
+---
+Environment setup needed to work on the codebase:
 1. Java 8
 2. Git
-3. Maven 
+3. Maven
 4. Any IDE (IntelliJ / Eclipse / VS Code)
 
-<br/>
 
-<h3>INSTRUCTIONS:</h3>
+### INSTRUCTIONS
+---
+*Note:*
+All required dependencies (ex. spring boot, data jpa, h2, etc) are already added to the POM.
 
-*Note:* 
-All required dependencies (ex. spring boot, data jpa, h2, etc) are already added to the POM. The candidate need not add any additional dependency for this assessment.
 
+#### Steps
+---
+1. Clone app using this CLI command:  git clone https://github.com/inoptradigital/employee-department-demo.git
+2. Import the project into your IDE, then build it.
+3. Run the spring boot app - fix any exceptions.
+4. At this point, the spring boot app should be in a running state, free of exceptions.
+5. Open h2 console - http://www.h2database.com/html/quickstart.html - and login (basic h2 properties have been set within the app).
 
-<h4>Steps:</h4>
-
-	1. Clone from git@github.com:inoptradigital/employee-department-demo.git
-	
-	2. Use your favorite text editor or IDE and make sure you’re familiar with it
-	
-	3. Import the project to your IDE and build it
-	
-	4. Run the spring boot application - you may see exceptions - fix them - Get yourself familiarize with the codebase
-	
-	5. At this point, the spring boot application is in running state without any exceptions
-
-	6. Open h2 console and login to the same (basic h2 properties have been set in the application)
-
-<br/>
-
-Build: 
+---
+**Build**
 _mvn clean install_
-
-Run tests: 
+---
+**Test**
 _mvn clean test_
+
+----
