@@ -15,6 +15,19 @@ The application aims to able to provide support for
 	 - Graphical representation of departmental dashboards:
 	 Expenses/department; Average salary/department; Employee count/department, etc.
 
+***Changes***
+1. Created Department Controller
+2. Created Employee Controller
+3. Finished implementation of Account Statistics Controller
+4. Properly Decorated Entities
+5. Created view entities to display data
+6. Created Salary Repository
+7. Created Salary Component Repository
+8. Created commands to initialize database for application
+9. Added insomnia requests to test application
+10. Added unit tests for controllers
+11. Added unit tests for services
+
 #### Salary Calculation Logic
 
 SalaryComponent is dependent upon base salary and can be calculated as baseSalary multiplied by respective factor. i.e.
@@ -60,3 +73,9 @@ _mvn clean install_
 _mvn clean test_
 
 ----
+
+**Setup**
+1. Open h2 console, use the commands provided in `resources/init.sql` file to create the database structures.
+2. run `mvn spring-boot:run` to run the application
+3. Download Insomnia to test the application endpoints
+4. Import the requests located in `resources/insomnia_requests.json`

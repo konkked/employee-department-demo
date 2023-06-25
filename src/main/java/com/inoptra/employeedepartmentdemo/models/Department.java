@@ -1,5 +1,6 @@
 package com.inoptra.employeedepartmentdemo.models;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -7,12 +8,25 @@ import java.util.List;
  * @Description:
  * Represents {@code Department} entity
  **/
+@Entity
 public class Department {
 
+	public Department() {
+	}
+
+	public Department(String name, List<Employee> employees){
+		this.name = name;
+		this.employees = employees;
+	}
+
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String name;
 
+	@OneToMany(mappedBy = "department")
 	private List<Employee> employees;
 
 	public Long getId() {

@@ -1,7 +1,12 @@
 package com.inoptra.employeedepartmentdemo.controllers;
 
+import com.inoptra.employeedepartmentdemo.services.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
 * @Author: Shrikrishna Prabhumirashi
@@ -14,25 +19,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 *  - Get average salary to be paid to all departments
 **/
 
+@RestController
 @RequestMapping("/account/accountstats")
 public class AccountStatisticsController {
+
+	@Autowired
+	DepartmentService departmentService;
+
+
 	@GetMapping("/all/total")
 	public double getTotalSalaryForAllDepartments() {
-		return 0.0;
+		return departmentService.getAllTotalSalary();
 	}
 	
 	@GetMapping("/{deptId}/total")
-	public double getTotalSalaryForDepartment() {
-		return 0.0;
+	public double getTotalSalaryForDepartment(@PathVariable("deptId") Integer deptId) {
+		return departmentService.getTotalSalary(deptId);
 	}
 	
 	@GetMapping("/all/avg")
 	public double getAverageSalaryForAllDepartments() {
-		return 0.0;
+
+		return departmentService.getAllAvgSalary();
 	}
 	
 	@GetMapping("/{deptId}/avg")
-	public double getAverageSalaryForDepartment() {
-		return 0.0;	
+	public double getAverageSalaryForDepartment(@PathVariable("deptId") Integer deptId) {
+		return departmentService.getAverageSalary(deptId);
 	}
 }
